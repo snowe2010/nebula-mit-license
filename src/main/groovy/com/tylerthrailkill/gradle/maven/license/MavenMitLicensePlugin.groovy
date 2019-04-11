@@ -7,8 +7,10 @@ import org.gradle.api.publish.maven.MavenPublication
 class MavenMitLicensePlugin implements Plugin<Project> {
     @Override
     void apply(Project project) {
-        project.plugins.apply MavenBasePublishPlugin
-
+        println("aljksdlkjsdjklaljkasdjklasdjklsdjklasdkljasdklj")
+//        if (!project.pluginManager.hasPlugin("nebula.maven-publish")) {
+            project.plugins.apply "nebula.maven-publish" //nebula.plugin.publishing.maven.MavenPublishPlugin
+//        }
         project.publishing {
             publications {
                 nebula(MavenPublication)
@@ -20,6 +22,7 @@ class MavenMitLicensePlugin implements Plugin<Project> {
     }
 
     def configureLicense(MavenPublication publication) {
+        print("HEYYYLKLJDFLJK")
         publication.pom.licenses {
             license {
                 name = 'The MIT License'

@@ -1,10 +1,20 @@
 //import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath("com.netflix.nebula:nebula-publishing-plugin:10.0.0")
+    }
+}
 plugins {
     base
 //    kotlin("jvm") version "1.3.21"
     java
+    groovy
     `java-gradle-plugin`
+    `maven-publish`
     id("com.gradle.plugin-publish") version "0.10.0"
 }
 
@@ -15,9 +25,14 @@ repositories {
     mavenCentral()
 }
 
-//dependencies {
+dependencies {
+//    runtime("com.netflix.nebula:nebula-publishing-plugin:10.0.0")
+//    compile(gradleApi())
+//    compile(gradleTestKit())
+//    compile(localGroovy())
+
 //    implementation(kotlin("stdlib-jdk8"))
-//}
+}
 
 //tasks.withType<KotlinCompile> {
 //    kotlinOptions.jvmTarget = "1.8"
@@ -36,6 +51,6 @@ gradlePlugin {
 
 pluginBundle {
     website = "https://github.com/snowe2010/nebula-mit-license"
-    vcsUrl = "git@github.com:snowe2010/nebula-mit-license.git"
+    vcsUrl = "https://github.com/snowe2010/nebula-mit-license.git"
     tags = listOf("nebula", "license", "mit", "maven central")
 }
