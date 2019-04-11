@@ -34,7 +34,7 @@ gradlePlugin {
 }
 
 pluginBundle {
-    website = "https://gi"
-    vcsUrl = ""
+    website = "https://github.com/snowe2010/nebula-mit-license"
+    vcsUrl = "git@github.com:snowe2010/nebula-mit-license.git"
     tags = listOf("nebula", "license", "mit", "maven central")
 }
