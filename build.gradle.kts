@@ -1,9 +1,10 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+//import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.3.21"
-    `java-gradle-plugin`
+    base
+//    kotlin("jvm") version "1.3.21"
     java
+    `java-gradle-plugin`
     id("com.gradle.plugin-publish") version "0.10.0"
 }
 
@@ -14,13 +15,13 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    implementation(kotlin("stdlib-jdk8"))
-}
+//dependencies {
+//    implementation(kotlin("stdlib-jdk8"))
+//}
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
-}
+//tasks.withType<KotlinCompile> {
+//    kotlinOptions.jvmTarget = "1.8"
+//}
 
 gradlePlugin {
     plugins {
